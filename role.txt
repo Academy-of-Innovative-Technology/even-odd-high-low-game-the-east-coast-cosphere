@@ -1,7 +1,7 @@
 Enter names for roles pn project
 
-Front-End (HTML, CSS:  <name> , <name>
-Back-End (Javascript): <name> , <name>
+Front-End (HTML, CSS:  Amaya 
+Back-End (Javascript): Jin 
 
            
 AI Resource: (if used ->)
