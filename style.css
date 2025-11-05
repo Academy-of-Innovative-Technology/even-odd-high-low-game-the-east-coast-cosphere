@@ -10,4 +10,38 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#Game_Container {
+    
+}
+
+.Game_Container_Top {
+
+    padding: 8px;
+    background: blue;
+}
+.Game_Container_Main{
+
+}
+
+
+.Game_Stats {
+    display: flex;
+}
+
+.Game_Comments {
+    display: flex;
+    align-items: center;
 }
