@@ -32,14 +32,39 @@ body {
     padding: 8px;
     background: blue;
 }
-.Game_Container_Main{
+.Game_Container_Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.Game_Current_Display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border: 2px solid black;
+}
+
+.Game_Buttons {
+    padding: 8px;
+}
+
+.Game_Stats_Container {
+    display: flex;
 }
 
 
 .Game_Stats {
+
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 8px;
+    border: 2px black solid;
 }
+
 
 .Game_Comments {
     display: flex;
