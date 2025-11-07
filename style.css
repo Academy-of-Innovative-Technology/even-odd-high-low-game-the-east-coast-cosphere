@@ -16,26 +16,49 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    background-color: #0f1226;
 }
 
 * {
     box-sizing: border-box;
+    color: white;
+
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+
+}
+
+button {
+    background-color: #1d224d;
+    color: white;
+    cursor: pointer;
 }
 
 #Game_Container {
-    
+    border: 2px gray solid;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .Game_Container_Top {
-
-    padding: 8px;
-    background: blue;
+    padding: 22px 24px;
+    background: linear-gradient(90deg, rgba(167, 139, 250, .15), rgba(110, 231, 255, .15));
+    border-bottom: 1px solid rgba(255, 255, 255, .08);;
 }
 .Game_Container_Main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #0f1226;
+    padding: 24px;
+    gap: 16px;
+}
+
+
+
+.Game_Container_Main > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .Game_Current_Display {
@@ -43,15 +66,67 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 8px;
-    border: 2px solid black;
+   
+    border: 2px gray solid;
+    border-radius: 20px;
+    overflow: hidden;
+
+    background: radial-gradient(60% 80% at 50% 0%, rgba(110,231,255,.14), transparent 70%), #0e1330;
+}
+
+#Game_Current_Tries {
+    font-size: 60px;
+}
+
+.Game_Submit_Section {
+    gap: 8px;
+}
+
+#Game_Answer_Submit_Input{
+    border: 2px gray solid;
+    border-radius: 20px;
+    font-size: 25px;;
+    width: 25%;
+    color: black;
+}
+#Game_Answer_Submit_Input_BTN {
+    background-color: green;
+
+    border: 2px gray solid;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 25%;
+
+    font-size: 25px;
+    padding: 8px;
+
+    
+}
+
+.Game_Buttons_Container {
+    gap: 8px;
 }
 
 .Game_Buttons {
     padding: 8px;
+    font-size: 20px;
+    border: 2px gray solid;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-grow: 1;
+    max-width: 25%;
+
+    
 }
 
+.Game_Hint_Options {
+    gap: 8px;
+}
+
+
+
 .Game_Stats_Container {
-    display: flex;
+    gap: 8px;
 }
 
 
@@ -60,13 +135,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+
+
+    flex-grow: 1;
 
     padding: 8px;
-    border: 2px black solid;
-}
 
+    border: 2px gray solid;
+    border-radius: 20px;
+    overflow: hidden;
+
+    background-color: #0d1131;
+}
+.Game_Stat_Name {
+    margin-bottom: 0;
+}
+.Game_Stat_Value {
+    font-size: 25px;
+}
 
 .Game_Comments {
     display: flex;
     align-items: center;
+    background-color: #0d1131;
 }

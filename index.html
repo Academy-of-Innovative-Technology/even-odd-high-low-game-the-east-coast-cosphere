@@ -13,13 +13,13 @@
     <div id="Game_Container">
       <div class="Game_Container_Top">
         <h2>Even or Odd Guess 0-100</h2>
-        <p>A random number is generated. Your goal is to guess the random number with the less tries that you can. You will get hints that will help you to get closer to the random number</p>
+        <p>A random number is generated. Your goal is to guess the random number with the less tries that you can.<br> You will get hints that will help you to get closer to the random number</p>
       </div>
 
       <div class="Game_Container_Main">
         
         <div class="Game_Current_Display">
-          <h1>0</h1>
+          <h1 id="Game_Current_Tries">0</h1>
           <p>Tries this round</p>
         </div>
 
@@ -28,13 +28,13 @@
           <button id="Game_Answer_Submit_Input_BTN">Submit Guess</button>
         </div>
         
-        <div class="Game_Buttons">
+        <div class="Game_Buttons_Container">
           <button class="Game_Buttons" id="Game_Retry_BTN">Retry</button>
           <button class="Game_Buttons" id="Game_Give_Up_BTN">Give Up</button>
           <button class="Game_Buttons" id="Game_Reset_All_BTN">Reset all</button>
         </div>
 
-        <div id="Game_Hint_Options">
+        <div class="Game_Hint_Options">
           <input id="Game_Hint_Input" type="checkbox">
           <label for="Game_Hint_Input">Show even/odd hint</label>
         </div>
