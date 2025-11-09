@@ -1,168 +1,168 @@
 html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #0f1226;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f1226;
 }
 
 * {
-    box-sizing: border-box;
-    color: white;
+  box-sizing: border-box;
+  color: white;
 
-    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
-
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial;
+}
+.bold {
+  font-weight: bold;
 }
 
 button {
-    background-color: #1d224d;
-    color: white;
-    cursor: pointer;
+  background-color: #1d224d;
+  color: white;
+  cursor: pointer;
 }
 
 #Game_Container {
-    border: 2px gray solid;
-    border-radius: 20px;
-    overflow: hidden;
+  border: 2px gray solid;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .Game_Container_Top {
-    padding: 22px 24px;
-    background: linear-gradient(90deg, rgba(167, 139, 250, .15), rgba(110, 231, 255, .15));
-    border-bottom: 1px solid rgba(255, 255, 255, .08);;
+  padding: 22px 24px;
+  background: linear-gradient(
+    90deg,
+    rgba(167, 139, 250, 0.15),
+    rgba(110, 231, 255, 0.15)
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .Game_Container_Main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #0f1226;
-    padding: 24px;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0f1226;
+  padding: 24px;
+  gap: 16px;
 }
 
-
-
 .Game_Container_Main > div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .Game_Current_Display {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px;
-   
-    border: 2px gray solid;
-    border-radius: 20px;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
 
-    background: radial-gradient(60% 80% at 50% 0%, rgba(110,231,255,.14), transparent 70%), #0e1330;
+  border: 2px gray solid;
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: radial-gradient(
+      60% 80% at 50% 0%,
+      rgba(110, 231, 255, 0.14),
+      transparent 70%
+    ),
+    #0e1330;
 }
 
 #Game_Current_Tries {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 .Game_Submit_Section {
-    gap: 8px;
+  gap: 8px;
 }
 
-#Game_Answer_Submit_Input{
-    border: 2px gray solid;
-    border-radius: 20px;
-    font-size: 25px;;
-    width: 25%;
-    color: black;
+#Game_Answer_Submit_Input {
+  border: 2px gray solid;
+  border-radius: 20px;
+  font-size: 25px;
+  width: 25%;
+  color: black;
 }
 #Game_Answer_Submit_Input_BTN {
-    background-color: green;
+  background-color: green;
 
-    border: 2px gray solid;
-    border-radius: 20px;
-    overflow: hidden;
-    width: 25%;
+  border: 2px gray solid;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 25%;
 
-    font-size: 25px;
-    padding: 8px;
-
-    
+  font-size: 25px;
+  padding: 8px;
 }
 
 .Game_Buttons_Container {
-    gap: 8px;
+  gap: 8px;
 }
 
 .Game_Buttons {
-    padding: 8px;
-    font-size: 20px;
-    border: 2px gray solid;
-    border-radius: 20px;
-    overflow: hidden;
-    flex-grow: 1;
-    max-width: 25%;
-
-    
+  padding: 8px;
+  font-size: 20px;
+  border: 2px gray solid;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-grow: 1;
+  max-width: 25%;
 }
 
 .Game_Hint_Options {
-    gap: 8px;
+  gap: 8px;
 }
-
-
 
 .Game_Stats_Container {
-    gap: 8px;
+  gap: 8px;
 }
-
 
 .Game_Stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+  flex-grow: 1;
 
+  padding: 8px;
 
-    flex-grow: 1;
+  border: 2px gray solid;
+  border-radius: 20px;
+  overflow: hidden;
 
-    padding: 8px;
-
-    border: 2px gray solid;
-    border-radius: 20px;
-    overflow: hidden;
-
-    background-color: #0d1131;
+  background-color: #0d1131;
 }
 .Game_Stat_Name {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 .Game_Stat_Value {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .Game_Comments {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start !important; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
 
-    padding: 8px;
-    background-color: #0d1131;
+  padding: 8px;
+  background-color: #0d1131;
 
-    border: 2px gray solid;
-    border-radius: 20px;
+  border: 2px gray solid;
+  border-radius: 20px;
 }

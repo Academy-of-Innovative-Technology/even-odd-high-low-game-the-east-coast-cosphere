@@ -1,81 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Even-or-Odd Guess (0–1000)</title>
-  <link href="style.css" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Even-or-Odd Guess (0–1000)</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div id="Game_Container">
+        <div class="Game_Container_Top">
+          <h2>Even or Odd Guess 0-100</h2>
+          <p>
+            A random number is generated. Your goal is to guess the random
+            number with the less tries that you can.<br />
+            You will get hints that will help you to get closer to the random
+            number
+          </p>
+        </div>
 
-  <main>
+        <div class="Game_Container_Main">
+          <div class="Game_Current_Display">
+            <h1 id="Game_Current_Tries">0</h1>
+            <p>Tries this round</p>
+          </div>
 
-    <div id="Game_Container">
-      <div class="Game_Container_Top">
-        <h2>Even or Odd Guess 0-100</h2>
-        <p>A random number is generated. Your goal is to guess the random number with the less tries that you can.<br> You will get hints that will help you to get closer to the random number</p>
+          <div class="Game_Submit_Section">
+            <input
+              id="Game_Answer_Submit_Input"
+              placeholder="0-100"
+              type="number"
+            />
+            <button id="Game_Answer_Submit_Input_BTN">Submit Guess</button>
+          </div>
+
+          <div class="Game_Buttons_Container">
+            <button class="Game_Buttons" id="Game_Retry_BTN">Retry</button>
+            <button class="Game_Buttons" id="Game_Give_Up_BTN">Give Up</button>
+            <button class="Game_Buttons" id="Game_Reset_All_BTN">
+              Reset all
+            </button>
+          </div>
+
+          <div class="Game_Hint_Options">
+            <input id="Game_Hint_Input" type="checkbox" />
+            <label for="Game_Hint_Input">Show even/odd hint</label>
+          </div>
+
+          <div class="Game_Stats_Container">
+            <div class="Game_Stats">
+              <h3 class="Game_Stat_Name">Wins</h3>
+              <p class="Game_Stat_Value" id="Game_Stat_Wins_Value">0</p>
+            </div>
+            <div class="Game_Stats">
+              <h3 class="Game_Stat_Name">Losses</h3>
+              <p class="Game_Stat_Value" id="Game_Stat_Losses_Value">0</p>
+            </div>
+            <div class="Game_Stats">
+              <h3 class="Game_Stat_Name">Rounds</h3>
+              <p class="Game_Stat_Value" id="Game_Stat_Rounds_Value">0</p>
+            </div>
+            <div class="Game_Stats">
+              <h3 class="Game_Stat_Name">Streak</h3>
+              <p class="Game_Stat_Value" id="Game_Stat_Streak_Value">0</p>
+            </div>
+            <div class="Game_Stats">
+              <h3 class="Game_Stat_Name">Retries</h3>
+              <p class="Game_Stat_Value" id="Game_Stat_Retries_Value">0</p>
+            </div>
+          </div>
+
+          <div class="Game_Comments">
+            <h1 class="Game_Comment_Emoji">🧊</h1>
+            <p class="Game_Comment_Text">Enter a number! I believe in you.</p>
+          </div>
+        </div>
       </div>
+    </main>
 
-      <div class="Game_Container_Main">
-        
-        <div class="Game_Current_Display">
-          <h1 id="Game_Current_Tries">0</h1>
-          <p>Tries this round</p>
-        </div>
-
-        <div class="Game_Submit_Section">
-          <input id="Game_Answer_Submit_Input" placeholder="0-100" type="number">
-          <button id="Game_Answer_Submit_Input_BTN">Submit Guess</button>
-        </div>
-        
-        <div class="Game_Buttons_Container">
-          <button class="Game_Buttons" id="Game_Retry_BTN">Retry</button>
-          <button class="Game_Buttons" id="Game_Give_Up_BTN">Give Up</button>
-          <button class="Game_Buttons" id="Game_Reset_All_BTN">Reset all</button>
-        </div>
-
-        <div class="Game_Hint_Options">
-          <input id="Game_Hint_Input" type="checkbox">
-          <label for="Game_Hint_Input">Show even/odd hint</label>
-        </div>
-
-        <div class="Game_Stats_Container">
-          <div class="Game_Stats">
-            <h3 class="Game_Stat_Name">Wins</h3>
-            <p class="Game_Stat_Value" id="Game_Stat_Wins_Value">0</p>
-          </div>
-          <div class="Game_Stats">
-            <h3 class="Game_Stat_Name">Losses</h3>
-            <p class="Game_Stat_Value" id="Game_Stat_Losses_Value">0</p>
-          </div>
-          <div class="Game_Stats">
-            <h3 class="Game_Stat_Name">Rounds</h3>
-            <p class="Game_Stat_Value" id="Game_Stat_Rounds_Value">0</p>
-          </div>
-          <div class="Game_Stats">
-            <h3 class="Game_Stat_Name">Streak</h3>
-            <p class="Game_Stat_Value" id="Game_Stat_Streak_Value">0</p>
-          </div>
-          <div class="Game_Stats">
-            <h3 class="Game_Stat_Name">Retries</h3>
-            <p class="Game_Stat_Value" id="Game_Stat_Retries_Value">0</p>
-          </div>
-        </div>
-
-        <div class="Game_Comments">
-          <h1 class="Game_Comment_Emoji">🧊</h1>
-          <p class="Game_Comment_Text">Enter a number! I believe in you.</p>
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-
-  </main>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
