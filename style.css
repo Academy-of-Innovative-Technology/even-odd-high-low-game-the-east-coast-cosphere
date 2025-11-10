@@ -34,6 +34,11 @@ button {
   background-color: #1d224d;
   color: white;
   cursor: pointer;
+  transition: 0.15s;
+}
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
 }
 
 #Game_Container {
@@ -98,6 +103,7 @@ button {
   font-size: 25px;
   width: 25%;
   color: black;
+  padding: 8px;
 }
 #Game_Answer_Submit_Input_BTN {
   background-color: green;
