@@ -172,3 +172,18 @@ button:hover {
   border: 2px gray solid;
   border-radius: 20px;
 }
+
+.Pop_Up_Animation {
+  animation: Pop_Up 0.2s linear forwards;
+}
+
+@keyframes Pop_Up {
+
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+
+}

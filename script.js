@@ -102,6 +102,8 @@ function Guess_Answer(Guess) {
   let Numbered_Guess = Number(Guess);
   let Status = Check_Answer(Numbered_Guess);
   let Hint_Activation = document.querySelector("#Game_Hint_Input").checked;
+  Game_Emoji_DOM.classList.add("Pop_Up_Animation");
+
   console.log(Hint_Activation);
   switch (Status) {
     case "Too Low":
@@ -170,6 +172,10 @@ document
       }
     }
   });
+
+Game_Emoji_DOM.addEventListener("animationend", () => {
+  Game_Emoji_DOM.classList.remove("Pop_Up_Animation");
+});
 
 // Default?
 Randomize_The_Guess_Number();

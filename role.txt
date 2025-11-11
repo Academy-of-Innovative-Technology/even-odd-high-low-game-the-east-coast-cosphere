@@ -1,6 +1,6 @@
 Enter names for roles pn project
 
-Front-End (HTML, CSS:  Amaya 
+Front-End (HTML, CSS: 
 Back-End (Javascript): Jin 
 
            
