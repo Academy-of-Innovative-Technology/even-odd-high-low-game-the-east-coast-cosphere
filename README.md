@@ -17,7 +17,7 @@ The game keeps track of:
 
 ## 🧩 Game Requirements
 
-### 1. **Core Gameplay**
+### 1. **Core Gameplay**  
 - The computer randomly generates a number within a given range of 0 to 1000.
 - The player attempts to guess the number.
 - After each guess, the game must display:
