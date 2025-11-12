@@ -83,7 +83,7 @@ function Retry() {
   Randomize_The_Guess_Number();
   Stats.Retries += 1;
 
-  if (Stats.Retries > Max_Retries) {
+  if (Stats.Retries >= Max_Retries) {
     Stats.Retries = 0;
     Stats.Losses += 1;
 
