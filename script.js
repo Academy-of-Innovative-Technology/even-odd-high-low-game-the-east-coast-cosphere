@@ -71,6 +71,7 @@ document
 
 function Give_Up() {
   Stats.Losses += 1;
+  Stats.Rounds += 1;
   Game_Emoji_DOM.innerHTML = "😞";
   Game_Comment_Text_DOM.innerHTML = `The number was ${Number_To_Guess}`;
   Randomize_The_Guess_Number();
@@ -86,7 +87,7 @@ function Retry() {
   if (Stats.Retries >= Max_Retries) {
     Stats.Retries = 0;
     Stats.Losses += 1;
-
+    Stats.Rounds += 1;
     Update_All_Display_Stats();
     Game_Emoji_DOM.innerHTML = "🚩";
     Game_Comment_Text_DOM.innerHTML = `You <span class="bold">exceeded</span> the <span class="bold">maximum retries</span>, you're getting a loss point`;
@@ -128,6 +129,7 @@ function Guess_Answer(Guess) {
       if (Stats.Tries_This_Round > Max_Guesses) {
         Stats.Losses += 1;
         Stats.Tries_This_Round = 0;
+        Stats.Rounds += 1;
         Randomize_The_Guess_Number();
         Update_All_Display_Stats();
         Game_Emoji_DOM.innerHTML = "❌";
@@ -143,6 +145,7 @@ function Guess_Answer(Guess) {
       Game_Emoji_DOM.innerHTML = "✅";
       Game_Comment_Text_DOM.innerHTML = `Correct answer 👏👏👏`;
       Stats.Wins += 1;
+      Stats.Rounds += 1;
       Stats.Tries_This_Round = 0;
       Randomize_The_Guess_Number();
       Update_All_Display_Stats();
@@ -163,6 +166,7 @@ function Guess_Answer(Guess) {
       if (Stats.Tries_This_Round > Max_Guesses) {
         Stats.Losses += 1;
         Stats.Tries_This_Round = 0;
+        Stats.Rounds += 1;
         Randomize_The_Guess_Number();
         Update_All_Display_Stats();
         Game_Emoji_DOM.innerHTML = "❌";
