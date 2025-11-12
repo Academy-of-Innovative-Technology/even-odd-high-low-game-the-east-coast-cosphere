@@ -1,9 +1,10 @@
 let Min_Number = 0;
-let Max_Number = 100;
+let Max_Number = 1000;
 
 let Number_To_Guess = 0;
 
 let Max_Retries = 10;
+let Max_Guesses = 10;
 
 let Stats = {
   Tries_This_Round: 0,
@@ -59,7 +60,10 @@ function Reset_All_Stats() {
   for (let index in Stats) {
     Stats[index] = 0;
   }
+  Randomize_The_Guess_Number();
   Update_All_Display_Stats();
+  Game_Emoji_DOM.innerHTML = "😃";
+  Game_Comment_Text_DOM.innerHTML = `Enter a number! I believe in you.`;
 }
 document
   .querySelector("#Game_Reset_All_BTN")
@@ -67,6 +71,9 @@ document
 
 function Give_Up() {
   Stats.Losses += 1;
+  Game_Emoji_DOM.innerHTML = "😞";
+  Game_Comment_Text_DOM.innerHTML = `The number was ${Number_To_Guess}`;
+  Randomize_The_Guess_Number();
   Update_All_Display_Stats();
 }
 document.querySelector("#Game_Give_Up_BTN").addEventListener("click", Give_Up);
@@ -107,6 +114,8 @@ function Guess_Answer(Guess) {
   console.log(Hint_Activation);
   switch (Status) {
     case "Too Low":
+      Stats.Tries_This_Round += 1;
+      Update_All_Display_Stats();
       console.log("Too Low");
       Game_Emoji_DOM.innerHTML = "⬇️";
       if (Hint_Activation) {
@@ -116,7 +125,17 @@ function Guess_Answer(Guess) {
       } else {
         Game_Comment_Text_DOM.innerHTML = `Your number is too <span class="bold">low</span>, try an <span class="bold">higher</span> number`;
       }
-
+      if (Stats.Tries_This_Round > Max_Guesses) {
+        Stats.Losses += 1;
+        Stats.Tries_This_Round = 0;
+        Randomize_The_Guess_Number();
+        Update_All_Display_Stats();
+        Game_Emoji_DOM.innerHTML = "❌";
+        Game_Comment_Text_DOM.innerHTML = `You exceeded the <span class="bold">maximum wrong answers</span> in this wrong which is ${Max_Guesses}. This round would be counted as a loss and a new round will start with an <span class="bold">new</span> random number`;
+        return;
+      }
+      console.log("Test");
+      
       break;
 
     case "Correct":
@@ -126,9 +145,12 @@ function Guess_Answer(Guess) {
       Stats.Wins += 1;
       Stats.Tries_This_Round = 0;
       Randomize_The_Guess_Number();
+      Update_All_Display_Stats();
       break;
 
     case "Too High":
+      Stats.Tries_This_Round += 1;
+      Update_All_Display_Stats();
       console.log("Too High");
       Game_Emoji_DOM.innerHTML = "⬆️";
       if (Hint_Activation) {
@@ -138,10 +160,19 @@ function Guess_Answer(Guess) {
       } else {
         Game_Comment_Text_DOM.innerHTML = `Your number is too high, try an lower number`;
       }
+      if (Stats.Tries_This_Round > Max_Guesses) {
+        Stats.Losses += 1;
+        Stats.Tries_This_Round = 0;
+        Randomize_The_Guess_Number();
+        Update_All_Display_Stats();
+        Game_Emoji_DOM.innerHTML = "❌";
+        Game_Comment_Text_DOM.innerHTML = `You exceeded the <span class="bold">maximum wrong answers</span> in this wrong which is ${Max_Guesses}. This round would be counted as a loss and a new round will start with an <span class="bold">new</span> random number`;
+        return;
+      }
+      
       break;
   }
-  Stats.Tries_This_Round += 1;
-  Update_All_Display_Stats();
+  console.log(Stats.Tries_This_Round);
 }
 
 // Conectar
